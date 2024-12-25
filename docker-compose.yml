@@ -1,0 +1,18 @@
+services:
+  projectservice:
+    container_name: project-service-container
+    build:
+      context: ProjectService/ProjectService
+      dockerfile: Dockerfile
+    ports:
+      - 5001:8080
+
+
+  taskservice:
+    container_name: task-service-container
+    build:
+      context: TaskService/TaskService
+      dockerfile: Dockerfile
+    ports:
+      - 5002:8080
+
